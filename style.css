@@ -1,0 +1,271 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+:root {
+    --container-desktop: 80%;
+    --container-mobile: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    background-color: #F2F9FE;
+}
+
+.container {
+    width: var(--container-desktop);
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+nav li a{
+    color: #909193;
+}
+
+nav li a:hover {
+    color: #111729;
+    cursor: pointer;
+}
+
+nav > button{
+    display: none;
+}
+
+#close_menu, #open_menu {
+    display: none;
+}
+
+form {
+    position: relative;
+    top: 1.4rem;
+}
+
+/* .highlight {
+    color: ;
+} */
+
+/* CREATING DARK MODE TOGGLE */
+.toggle {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #e0e0e0;
+    position: relative;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    cursor: pointer;
+}
+
+.toggle::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 24px;
+    width: 24px;
+    margin: 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+}
+
+#toggle:checked + .toggle {
+    background-color: #111729;
+}
+
+#toggle:checked + .toggle::before {
+    transform: translateX(30px);
+    -webkit-transform: translateX(30px);
+    -moz-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    -o-transform: translateX(30px);
+}
+
+input {
+    display: none;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero_sect {
+    margin-top: 6rem;
+    width: 80%;
+    margin-bottom: 4rem;
+}
+
+.left > p:nth-of-type(1) {
+    color: #111729;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 3.75rem;
+    color: #223344;
+    margin-bottom: 2rem;
+}
+
+
+.right {
+    place-self: center;
+}
+.right img {
+    width: 100%;
+}
+
+.left > p:nth-of-type(2) {
+    color: #909193;
+    margin-bottom: 1rem;
+}
+
+section button {
+    padding: 1rem 0;
+    width: 150px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+
+section button:nth-of-type(1) {
+    background-color: #2A4DD0;
+    color: white;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    text-transform: uppercase;
+    margin-right: 2rem;
+}
+
+section button:nth-of-type(2) {
+    background-color: transparent;
+    color: #2A4DD0;
+    text-decoration: underline;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.bottom div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #909193;
+}
+
+@media(max-width:640px) {
+    .container {
+        width: var(--container-mobile);
+    }
+
+    nav {
+        display: grid;
+        position: fixed;
+        top: 0;
+        grid-template-columns: 40% 60%;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    nav > img {
+        padding: 1rem;
+    }
+    
+
+    nav > div {
+        width: 100%;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+
+    #open_menu {
+        display: inline-block;
+        align-self: flex-end;
+        background-color: transparent;
+        font-size: 1.8rem;
+    }
+
+    #close_menu {
+        align-self: flex-end;
+        background-color: transparent;
+        font-size: 1.8rem;
+    }
+
+    nav > div ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav form {
+        margin: 0 auto;
+        display: none;
+    }
+
+    .try {
+        display: none;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+        width: 80% !important;
+        margin: 0 auto !important;
+    }
+
+    .right {
+        grid-row: 1;
+        margin-top: 6rem;
+        width: 100%;
+    }
+
+}
+
+
+
